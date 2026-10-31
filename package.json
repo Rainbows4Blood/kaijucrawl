@@ -1,0 +1,26 @@
+{
+  "name": "kaijucrawl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "tauri": "tauri",
+    "desktop": "tauri dev",
+    "desktop:build": "tauri build --no-bundle"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2",
+    "@testing-library/dom": "^10",
+    "@testing-library/user-event": "^14",
+    "jsdom": "^27",
+    "typescript": "^5.9",
+    "vite": "^8",
+    "vitest": "^4"
+  }
+}

@@ -1,0 +1,71 @@
+/* Local CSS and SVG only; the current workspace controls the whole application. */
+.menu-icon{flex:none;display:grid;place-items:center;width:25px}.menu-icon svg{width:25px;height:25px}.menu-copy{flex:1;min-width:0}.main-menu nav .menu-run-state{color:var(--mint);font-weight:600;text-transform:capitalize}.menu-run-state:empty{display:none}
+.workspace-emblem{display:none}.prerequisite-panel h2{color:var(--amber)}.prerequisite-panel>p{color:var(--muted);font-size:12px;max-width:760px}.prerequisite-panel ul{list-style:none;padding:0;margin:20px 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 30px}.prerequisite-panel li{display:flex;gap:14px;justify-content:space-between;font-size:12px;line-height:1.6}.prerequisite-panel strong{color:var(--amber);font-size:11px;text-align:right;font-weight:500}
+[data-theme=dnd]{--mint:#e5be77;--violet:#e4a880;--amber:#f5ce89;--muted:#b7a999;--line:#4b3d33;--theme-bg:#161310;--theme-surface:#221c17;--theme-raised:#30261e;--theme-text:#f0e6d5;--theme-border:#795c39;--theme-heading:Georgia,"Palatino Linotype",serif;--theme-glow:#9e632c26;background:radial-gradient(ellipse at 80% 5%,#71432338,transparent 52%),repeating-linear-gradient(100deg,#ffffff02 0 1px,transparent 1px 5px),var(--theme-bg);color:var(--theme-text)}
+[data-theme=shadowrun]{--mint:#67d7ff;--violet:#8aaeff;--amber:#f4c87b;--muted:#92adc9;--line:#23415f;--theme-bg:#07111e;--theme-surface:#0c1b2c;--theme-raised:#11283f;--theme-text:#dcefff;--theme-border:#337da4;--theme-heading:Consolas,"Cascadia Code",monospace;--theme-glow:#248ae726;background:radial-gradient(ellipse at 85% 0,#125ba13b,transparent 58%),linear-gradient(#389fea08 1px,transparent 1px),linear-gradient(90deg,#389fea08 1px,transparent 1px),var(--theme-bg);background-size:auto,38px 38px,38px 38px,auto;color:var(--theme-text)}
+[data-theme=coc]{--mint:#9abf89;--violet:#80b59e;--amber:#d4bc80;--muted:#a0afa2;--line:#314539;--theme-bg:#0b120f;--theme-surface:#121f18;--theme-raised:#1b2c22;--theme-text:#e0e7d8;--theme-border:#516b4b;--theme-heading:Georgia,"Times New Roman",serif;--theme-glow:#7894561c;background:radial-gradient(ellipse at 50% -10%,#45644b40,transparent 60%),repeating-linear-gradient(90deg,transparent 0 118px,#71896105 119px 120px),var(--theme-bg);color:var(--theme-text)}
+[data-theme]:not([data-theme=default]){min-height:100vh;transition:background-color .2s,color .2s}
+[data-theme]:not([data-theme=default]) .app-header,[data-theme]:not([data-theme=default]) .main-menu{background:var(--theme-surface);border-color:var(--line)}
+[data-theme]:not([data-theme=default]) .brand,[data-theme]:not([data-theme=default]) h1,[data-theme]:not([data-theme=default]) h2,[data-theme]:not([data-theme=default]) .workspace-title{font-family:var(--theme-heading)}
+[data-theme]:not([data-theme=default]) h1{font-size:clamp(29px,3.2vw,43px);font-weight:500;letter-spacing:-.5px}
+[data-theme]:not([data-theme=default]) .panel{background:var(--theme-surface);border-color:var(--line)}
+[data-theme]:not([data-theme=default]) .discovery-summary{background:linear-gradient(120deg,var(--theme-raised),var(--theme-surface));border-color:var(--theme-border);box-shadow:0 12px 35px #0002}
+[data-theme]:not([data-theme=default]) .discovery-heading{position:relative;max-width:none;min-height:135px;padding-right:150px;padding-bottom:8px}
+[data-theme]:not([data-theme=default]) .workspace-emblem{display:grid;place-items:center;position:absolute;right:20px;top:0;width:114px;height:114px;color:var(--mint);background:radial-gradient(circle,var(--theme-glow),transparent 70%)}
+.workspace-emblem svg{width:78px;height:78px;stroke-width:.8}
+[data-theme]:not([data-theme=default]) .eyebrow,[data-theme]:not([data-theme=default]) .discovery-sequence p:first-child{color:var(--violet)}
+[data-theme]:not([data-theme=default]) .subtitle,[data-theme]:not([data-theme=default]) .discovery-description,[data-theme]:not([data-theme=default]) .discovery-scope,[data-theme]:not([data-theme=default]) .discovery-note,[data-theme]:not([data-theme=default]) .discovery-stats span,[data-theme]:not([data-theme=default]) .discovery-categories>span,[data-theme]:not([data-theme=default]) .main-menu nav small,[data-theme]:not([data-theme=default]) .storage-dot{color:var(--muted)}
+[data-theme]:not([data-theme=default]) .discovery-controls .check,[data-theme]:not([data-theme=default]) .discovery-categories b,[data-theme]:not([data-theme=default]) .icon-button,[data-theme]:not([data-theme=default]) .secondary{color:var(--theme-text)}
+[data-theme]:not([data-theme=default]) .discovery-controls{border-color:var(--line)}
+[data-theme]:not([data-theme=default]) .discovery-step,[data-theme]:not([data-theme=default]) .discovery-meter,[data-theme]:not([data-theme=default]) .icon-button,[data-theme]:not([data-theme=default]) .secondary{background:var(--theme-raised);border-color:var(--theme-border)}
+[data-theme]:not([data-theme=default]) .discovery-card.is-active{background:var(--theme-raised);border-color:var(--mint);box-shadow:0 0 22px var(--theme-glow)}
+[data-theme]:not([data-theme=default]) .crawler-tabs button[aria-selected=true],[data-theme]:not([data-theme=default]) .main-menu nav button[aria-current=page]{background:var(--theme-raised);border-color:var(--theme-border);color:var(--mint)}
+[data-theme]:not([data-theme=default]) .status-pill{background:var(--theme-raised);border-color:var(--theme-border)}
+[data-theme]:not([data-theme=default]) .primary{color:var(--theme-bg)}
+[data-theme=dnd]:not([data-theme=default]) .discovery-card{border-radius:4px 15px 4px 15px;border-top:3px double var(--theme-border)}
+[data-theme=dnd]:not([data-theme=default]) .discovery-step{border:1px solid var(--theme-border);border-radius:50%;font-family:var(--theme-heading);font-size:15px}
+[data-theme=dnd]:not([data-theme=default]) .discovery-heading:after{content:"";display:block;width:90px;height:3px;background:linear-gradient(90deg,var(--mint),transparent);margin-top:23px}
+[data-theme=shadowrun]:not([data-theme=default]) h1{font-size:clamp(27px,3vw,36px);letter-spacing:-1.5px}[data-theme=shadowrun]:not([data-theme=default]) .workspace-title{font-size:22px}
+[data-theme=shadowrun]:not([data-theme=default]) .discovery-card,[data-theme=shadowrun]:not([data-theme=default]) .discovery-summary{border-radius:2px 18px 2px 2px;border-left:3px solid var(--theme-border)}
+[data-theme=shadowrun]:not([data-theme=default]) .discovery-step,[data-theme=shadowrun]:not([data-theme=default]) .primary,[data-theme=shadowrun]:not([data-theme=default]) .crawler-tabs button{border-radius:2px;font-family:var(--theme-heading)}
+[data-theme=shadowrun]:not([data-theme=default]) .discovery-card-top .eyebrow{letter-spacing:2px;color:var(--violet)}
+[data-theme=coc]:not([data-theme=default]) .discovery-summary{border-radius:28px 28px 6px 6px;border-top:3px double var(--theme-border)}
+[data-theme=coc]:not([data-theme=default]) .discovery-card{border-radius:22px 22px 5px 5px;background:linear-gradient(180deg,var(--theme-raised),var(--theme-surface) 70%)}
+[data-theme=coc]:not([data-theme=default]) .workspace-emblem{border:1px solid var(--line);border-radius:55% 55% 8px 8px}
+[data-theme=coc]:not([data-theme=default]) .discovery-step{border-radius:50% 50% 3px 3px;border:1px solid var(--theme-border);font-family:var(--theme-heading);font-size:15px}
+@media(max-width:900px){.prerequisite-panel ul{grid-template-columns:1fr}[data-theme]:not([data-theme=default]) .discovery-heading{padding-right:105px}.workspace-emblem svg{width:60px;height:60px}[data-theme]:not([data-theme=default]) .workspace-emblem{width:85px;height:100px;right:0}}
+
+/* Pencil, ink and squared paper: this workspace intentionally uses a light palette. */
+[data-theme=osr]{color-scheme:light;--mint:#181818;--violet:#353535;--amber:#282828;--muted:#535353;--line:#bdbdbd;--theme-bg:#fafafa;--theme-surface:#fff;--theme-raised:#f0f0f0;--theme-text:#181818;--theme-border:#323232;--theme-heading:"Courier New",Courier,monospace;--theme-glow:#0000000a;color:var(--theme-text);background-color:var(--theme-bg);background-image:linear-gradient(#00000016 1px,transparent 1px),linear-gradient(90deg,#00000016 1px,transparent 1px),linear-gradient(#00000008 1px,transparent 1px),linear-gradient(90deg,#00000008 1px,transparent 1px);background-size:80px 80px,80px 80px,16px 16px,16px 16px}
+[data-theme=osr]:not([data-theme=default]) .app-header{border-bottom:2px solid #222}
+[data-theme=osr]:not([data-theme=default]) .discovery-summary,[data-theme=osr]:not([data-theme=default]) .discovery-card{background:#ffffffef;border:1px solid #333;border-radius:0;box-shadow:5px 5px 0 #00000012}
+[data-theme=osr]:not([data-theme=default]) .discovery-grid{grid-template-columns:1fr}
+[data-theme=osr]:not([data-theme=default]) .discovery-card h2{font-size:24px}
+[data-theme=osr]:not([data-theme=default]) .discovery-categories{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 30px;margin-top:10px}
+[data-theme=osr]:not([data-theme=default]) .discovery-categories>span{border-bottom:1px dashed #aaa;padding:11px 0;font-size:11px;align-items:center}
+[data-theme=osr]:not([data-theme=default]) .discovery-categories b{font-size:17px;font-family:var(--theme-heading)}
+[data-theme=osr]:not([data-theme=default]) .discovery-summary h2,[data-theme=osr]:not([data-theme=default]) .discovery-stats strong,[data-theme=osr]:not([data-theme=default]) .main-menu nav button,[data-theme=osr]:not([data-theme=default]) .quiet,[data-theme=osr]:not([data-theme=default]) .discovery-step-detail{color:var(--theme-text)}
+[data-theme=osr]:not([data-theme=default]) .discovery-summary-top p,[data-theme=osr]:not([data-theme=default]) .discovery-cost,[data-theme=osr]:not([data-theme=default]) .discovery-status,[data-theme=osr]:not([data-theme=default]) .discovery-sequence p,[data-theme=osr]:not([data-theme=default]) .page-note,[data-theme=osr]:not([data-theme=default]) .menu-note{color:var(--muted)}
+[data-theme=osr]:not([data-theme=default]) .primary,[data-theme=osr]:not([data-theme=default]) .secondary,[data-theme=osr]:not([data-theme=default]) .discovery-step,[data-theme=osr]:not([data-theme=default]) .crawler-tabs button,[data-theme=osr]:not([data-theme=default]) .main-menu nav button{border-radius:0}
+[data-theme=osr]:not([data-theme=default]) .discovery-step{border:1px solid #222;font-family:var(--theme-heading)}
+[data-theme=osr]:not([data-theme=default]) .discovery-card.is-active{border:2px solid #111;box-shadow:5px 5px 0 #333}
+[data-theme=osr]:not([data-theme=default]) .discovery-heading:after{content:"";display:block;margin-top:20px;width:112px;border-bottom:3px double #333}
+[data-theme=osr]:not([data-theme=default]) .workspace-emblem{background:transparent;border:1px solid #444;transform:rotate(-3deg)}
+[data-theme=osr]:not([data-theme=default]) .form-error{color:#111;font-weight:600;text-decoration:underline;text-decoration-style:dotted}
+[data-theme=osr]:not([data-theme=default]) .discovery-sequence{border-color:#aaa}
+[data-theme=osr]:not([data-theme=default]) button:focus-visible,[data-theme=osr]:not([data-theme=default]) input:focus-visible{outline:2px solid #111}
+@media(max-width:1050px){[data-theme=osr]:not([data-theme=default]) .discovery-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}}
+
+[data-theme=osr]:not([data-theme=default]) .status-pill,[data-theme=osr]:not([data-theme=default]) .menu-note span,[data-theme=osr]:not([data-theme=default]) .muted-text{color:var(--muted)}
+
+/* Brass and burgundy chronicles; iron and warning-red imperial archives. */
+[data-theme=warhammer_fantasy]{--mint:#edc887;--violet:#e9b3a0;--amber:#f2d39c;--muted:#c4aaa3;--line:#553a3c;--theme-bg:#180e12;--theme-surface:#26171b;--theme-raised:#382126;--theme-text:#f4e5d4;--theme-border:#a17c4c;--theme-heading:Georgia,"Palatino Linotype",serif;--theme-glow:#c59b5228;background:radial-gradient(ellipse at 85% 0,#76323d50,transparent 55%),repeating-linear-gradient(120deg,#e5c48b04 0 1px,transparent 1px 8px),var(--theme-bg);color:var(--theme-text)}
+[data-theme=warhammer_40k]{--mint:#f0c18b;--violet:#f29a94;--amber:#f4cd77;--muted:#b8abb0;--line:#4a383d;--theme-bg:#100f12;--theme-surface:#1d1a20;--theme-raised:#30252c;--theme-text:#eee6e4;--theme-border:#a65354;--theme-heading:Georgia,"Times New Roman",serif;--theme-glow:#b83e4528;background:radial-gradient(ellipse at 50% -15%,#9c303c35,transparent 65%),repeating-linear-gradient(90deg,transparent 0 159px,#bea49e07 160px 161px),var(--theme-bg);color:var(--theme-text)}
+[data-theme=warhammer_fantasy] .discovery-card,[data-theme=warhammer_fantasy] .discovery-summary{border-radius:3px;border-top:4px double var(--theme-border)}
+[data-theme=warhammer_fantasy] .workspace-emblem{border:1px solid var(--theme-border);border-radius:50%}
+[data-theme=warhammer_fantasy] .discovery-step{border-radius:50%;border:1px solid var(--theme-border);font-family:var(--theme-heading);font-size:16px}
+[data-theme=warhammer_40k] .discovery-card,[data-theme=warhammer_40k] .discovery-summary{border-radius:2px;border-top:3px solid var(--theme-border);box-shadow:inset 0 1px 0 #f0c18b26,0 10px 30px #0003}
+[data-theme=warhammer_40k] .discovery-heading:after{content:"";display:block;margin-top:20px;width:100px;height:5px;background:repeating-linear-gradient(135deg,var(--theme-border) 0 5px,transparent 5px 10px)}
+[data-theme=warhammer_40k] .discovery-step{border-radius:1px;border:1px solid var(--theme-border);font-family:Consolas,monospace}
+[data-theme=warhammer_40k] .discovery-card h2{letter-spacing:.5px}
+.main-menu nav{overflow-y:auto;min-height:0;overscroll-behavior:contain;scrollbar-width:thin}

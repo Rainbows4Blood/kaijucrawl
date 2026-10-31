@@ -1,0 +1,11 @@
+DROP TRIGGER IF EXISTS warhammer_scope_added;
+DROP TRIGGER IF EXISTS warhammer_scope_changed;
+DROP TRIGGER IF EXISTS warhammer_scope_removed;
+DROP TRIGGER IF EXISTS warhammer_inputs_changed;
+DROP TRIGGER IF EXISTS warhammer_context_removed;
+DROP TRIGGER IF EXISTS warhammer_context_family_changed;
+DROP TABLE IF EXISTS warhammer_context;
+DROP TABLE IF EXISTS warhammer_scope;
+DROP VIEW IF EXISTS warhammer_scope_source;
+DELETE FROM book_classifications WHERE system IN ('warhammer_fantasy','warhammer_40k');
+DELETE FROM analysis_groups WHERE system IN ('warhammer_fantasy','warhammer_40k');
